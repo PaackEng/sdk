@@ -1,0 +1,35 @@
+oauth:
+  issuerUrl: "https://paack-hq-production.eu.auth0.com/oauth/token"
+  grantType: "client_credentials"
+  audience: "https://ggl-pro-gcp-gw"
+configServer: "https://retailers-config-3tyqi7b7ta-ew.a.run.app/configs/python-sdk"
+maxRetries: 3
+connectionRequestTimeout: 10
+connectTimeout: 10
+socketTimeout: 30
+retryIntervalInMillis: 300
+retryIntervalMultiplicationFactor: 2
+domains:
+  pod: "https://api.paack.app/public/v3"
+  label: "https://api.paack.io"
+  order: "https://api.paack.app"
+  tracking_pull: "https://api.paack.app/api/v3/tracking"
+  coverage: "https://paack.io/api/v3"
+  retailer_location: "https://api.shm.paack.app"
+audiences:
+  pod: "https://ggl-pro-gcp-gw"
+  label: "https://ggl-pro-gcp-gw"
+  order: "https://ggl-pro-gcp-gw"
+  tracking_pull: "https://ggl-pro-gcp-gw"
+  coverage: "https://ggl-pro-gcp-gw"
+  retailer_location: "https://api.shm.paack.app"
+resources:
+  tracking_pull:
+    last_status: "/getStatuses?externalIds={externalIds}"
+    status_list: "/listStatuses?"
+    translation: "/EventTranslationGet?lang={lang}"
+  order: "/public/v3/orders"
+  pod: "/orders/{external_id}/delivery_verifications"
+  coverage: "/coverage"
+  label: "/v3/labels"
+  retailer_location: "/rls"

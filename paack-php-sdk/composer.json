@@ -1,0 +1,25 @@
+{
+    "authors": [
+        {
+            "name": "paack",
+            "email": "contact@paack.co"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Paack": "src/"
+        },
+        "psr-4": {
+            "Paack\\": "src/"
+        }
+    },
+    "name": "paack/sdk-paack",
+    "require": {
+        "guzzlehttp/guzzle": "^7.5",
+        "symfony/yaml": "*",
+        "phpunit/phpunit": "^9.5",
+        "cache/apcu-adapter": "^1.2",
+        "php": "^8.1",
+        "league/iso3166": "^4.1"
+    }
+}

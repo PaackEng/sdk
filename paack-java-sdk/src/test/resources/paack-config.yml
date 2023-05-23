@@ -1,0 +1,7 @@
+oauth:
+  issuerUrl: https://paack-hq-staging.eu.auth0.com/oauth/token
+  grantType: client_credentials
+  audience: "https://ggl-stg-gcp-gw"
+configServer: https://retailers-config-3tyqi7b7ta-ew.a.run.app/configs/python-sdk
+environment: staging
+maxRetries: 3
