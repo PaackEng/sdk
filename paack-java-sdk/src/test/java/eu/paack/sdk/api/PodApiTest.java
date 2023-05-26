@@ -15,8 +15,8 @@ public class PodApiTest {
 
     @Before
     public void setUp() {
-        String clientId = "47SoYRqAZWdd26Cify0fwLlxtsO50F4R";
-        String clientSecret = "MxVunSMrU-8UDOqpUeR7aTzVF7lB4XVz-8jjEjsO4tN_4xZlg54_iTGlnQYN9Plp";
+        String clientId = System.getEnv("CLIENT_ID");
+        String clientSecret = System.getEnv("CLIENT_SECRET");
 
         paack = new Paack(clientId, clientSecret, Domain.STAGING);
     }

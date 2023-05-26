@@ -14,8 +14,7 @@ class TestRetailer extends TestCase
 
     public function setUp(): void
     {
-        //$this->init = new Init( getenv('CLIENT_ID'), getenv('CLIENT_SECRET'), 'staging');
-        $this->init = new Init('47SoYRqAZWdd26Cify0fwLlxtsO50F4R', 'MxVunSMrU-8UDOqpUeR7aTzVF7lB4XVz-8jjEjsO4tN_4xZlg54_iTGlnQYN9Plp', 'staging');
+        $this->init = new Init( getenv('CLIENT_ID'), getenv('CLIENT_SECRET'), 'staging');
     }
     //{"success":{"retailer_location_id":"9024a6d9-41c5-42a8-99a2-2d30519726c8"}}
     public function testCreateRetailerLocation() {
