@@ -1,0 +1,35 @@
+oauth:
+  issuerUrl: "https://paack-hq-staging.eu.auth0.com/oauth/token"
+  grantType: "client_credentials"
+  audience: "https://ggl-stg-gcp-gw"
+configServer: "https://retailers-config-3tyqi7b7ta-ew.a.run.app/configs/python-sdk"
+maxRetries: 3
+connectionRequestTimeout: 10
+connectTimeout: 10
+socketTimeout: 30
+retryIntervalInMillis: 300
+retryIntervalMultiplicationFactor: 2
+domains:
+  pod: "https://api.staging.paack.app/public/v3"
+  label: "https://api.staging.paack.io"
+  order: "https://api.staging.paack.app"
+  tracking_pull: "https://api.staging.paack.app/api/v3/tracking"
+  coverage: "https://api-shm-sta.paack.io"
+  retailer_location: "https://api.shm.staging.paack.app"
+audiences:
+  pod: "https://ggl-stg-gcp-gw"
+  label: "https://ggl-stg-gcp-gw"
+  order: "https://ggl-stg-gcp-gw"
+  tracking_pull: "https://ggl-stg-gcp-gw"
+  coverage: "https://ggl-stg-gcp-gw"
+  retailer_location: "https://api.shm.staging.paack.app"
+resources:
+  tracking_pull:
+    last_status: "/getStatuses?externalIds={externalIds}"
+    status_list: "/listStatuses?"
+    translation: "/EventTranslationGet?lang={lang}"
+  order: "/public/v3/orders"
+  pod: "/orders/{external_id}/delivery_verifications"
+  coverage: "/coverage"
+  label: "/v3/labels"
+  retailer_location: "/rls"
